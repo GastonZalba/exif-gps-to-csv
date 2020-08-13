@@ -28,6 +28,9 @@ def getGPS(filepath):
         
         if altitude:
             alt_value = eval(str(altitude))
+            # sum or rest custom value
+            if sys.argv[2:]:
+                alt_value = (alt_value + float(sys.argv[2]))
         else:
             return {}
         
